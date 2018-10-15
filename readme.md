@@ -10,3 +10,7 @@ Enzo Hilzinger, Tim Bayer, Anika Schmidt
 ## Used Technologies
 
 HTML, JS, Java, CSS
+
+## Development Status
+
+Nothing yet.
