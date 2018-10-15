@@ -13,4 +13,6 @@ HTML, JS, CSS, PHP
 
 ## Development Status
 
-Live version can be viewed at: http://ec2-34-201-167-234.compute-1.amazonaws.com/#
+Live version can be viewed at: www.la-cu.com
+
+Hosting created and maintained with ♥ by TheEny53 on AWS
