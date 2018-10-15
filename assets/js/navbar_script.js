@@ -1,11 +1,13 @@
+var currentId = 0;
+
 $(document).ready( function() {
-	
+
 	let navbar_dir = "templates/navbar_template.html";
-	
+
 	$.get(navbar_dir, function(data){
 		$(".nav").replaceWith(data);
 	});
-	
+
     function checkScroll(){
         var opacity = 150; //start point navbar fixed to top changes in px
 
@@ -21,7 +23,7 @@ $(document).ready( function() {
             checkScroll();
         });
     }
-    
+
     $('.dropdown').on('show.bs.dropdown', function() {
         $(this).find('.dropdown-menu').first().stop(true, true).slideDown(3000);
     });
@@ -29,5 +31,22 @@ $(document).ready( function() {
     $('.dropdown').on('hide.bs.dropdown', function() {
         $(this).find('.dropdown-menu').first().stop(true, true).slideUp(300);
     });
-    
+
 })
+
+function changeContent(id){
+	let templates = [
+		"templates/empty.html",
+		"templates/empty.html",
+		"templates/menu_template.html",
+		"templates/empty.html",
+		"templates/empty.html"
+	]
+	$("#"+currentId).removeClass("active");
+	currentId = id;
+	$("#"+id).addClass("active");
+	$.get(templates[id], function(data){
+		$(".placeholder").replaceWith(data);
+	});
+
+}
