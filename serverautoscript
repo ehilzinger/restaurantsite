@@ -1,0 +1,4 @@
+#! /bin/bash
+git pull
+cp -R /home/ec2-user/webproject/restaurantsite/. /var/www/html/
+rm -R /var/www/html/.git
