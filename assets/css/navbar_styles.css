@@ -1,0 +1,21 @@
+.navbar{
+	min-height: 90px;
+	font-size: 16px;
+}
+
+@media (min-width:768px)	{
+.navbar{
+	padding-top: 20px;
+}
+}
+
+.navbar .dropdown-menu li a {
+  padding: 10px 15px;
+  margin: 0 0 1px 0;
+  font-size: 15px;
+}
+
+.icon-bar {
+  width: 22px;
+  float: right;
+}
