@@ -1,0 +1,39 @@
+
+.book{
+    padding-top: 70px;
+}
+
+.btn{
+    background-color: #42f4d1 !important;
+    color: black !important;
+
+}
+
+.btn:hover{
+    background-color: #FFFFFF !important;
+}
+
+.column{
+  max-width: 370px;
+  min-width: 180px;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  padding-bottom: 10px;
+}
+@media(min-width:769px){
+  .book {
+    padding-top: 120px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+
+}
+
+@media(min-width:900px){
+  .book{
+    padding-top: 120px;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
