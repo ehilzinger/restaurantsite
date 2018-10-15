@@ -13,4 +13,4 @@ HTML, JS, Java, CSS
 
 ## Development Status
 
-Nothing yet.
+Live version can be viewed at: http://ec2-34-201-167-234.compute-1.amazonaws.com/#
