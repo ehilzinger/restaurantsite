@@ -4,54 +4,74 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>La Cuisine - Speisekarte</title>
+  <title>La Cuisine - Reservieren</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
   <link rel="stylesheet" href="./assets/css/navbar_styles.css">
   <link rel="stylesheet" href="./assets/css/topbutton.css" />
   <link rel="stylesheet" href="./assets/css/book.css" />
+  <link rel="stylesheet" href="./assets/css/popup.css" />
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+  <script src="./assets/js/book_script.js"></script>
   <script src="./assets/js/navbar_script.js"></script>
   <script src="./assets/js/top_button.js"></script>
+  <script src="./assets/js/popup.js"></script>
 </head>
 
 <body>
   <div class="nav"></div>
-  <div class="img">
+  <img  class = "img" src="./content/img/restaurant_tables.jpg" />
 
-  </div>
-
-
-  <form action="./assets/php/book.php" method="post" onsubmit="" class="book">
+  <form  action="./assets/php/book.php" method="post" onsubmit="return checkForm()" class="book">
     <div class="container">
       <div class="form-row justify-content-center">
         <div class="col-md-6 column">
-          <input type="text" name="firstname" class="form-control" placeholder="Vorname">
+          <input id="fname" type="text" name="firstname" class="form-control" placeholder="Vorname">
       </div>
           <div class="col-md-6 column">
-            <input type="text" name="lastname" class="form-control" placeholder="Nachname">
+            <input id="lname" type="text" name="lastname" class="form-control" placeholder="Nachname">
       </div>
           </div>
 
           <div class="form-row justify-content-center">
             <div class="col-md-6 column mail">
-              <input type="email" name="email" class="form-control" placeholder="Email-Adresse">
+              <input id="mail" type="email" name="email" class="form-control" placeholder="Email-Adresse">
               </div>
               <div class="col-md-6 column">
-                <input type="text" name="amountofpersons" class="form-control" placeholder="Anzahl Personen">
+                <input id="amountofpersonsid" onclick="clickedOnAmountOfPersons()" value="" type="number" name="amountofpersons" class="form-control" placeholder="Anzahl Personen">
               </div>
+              <div class="col-md-6 column">
+        <input class="form-control" id="date" name="date" placeholder="Datum" type="text"/>
+      </div>
+      <div class="col-md-6 column">
+        <input title="Uhrzeit" id="time" onclick="" type="time" name="time" class="form-control" placeholder="Uhrzeit">
+      </div>
+      <div class="form-group col-md-12 col-sm-12 col-lg-12 column">
+    <textarea name="notes" type="text" class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Ihre Nachricht an uns"></textarea>
+</div>
               </div>
 
+
+
               <div class="text-center">
+                <div class="popup" >
+  <span class="popuptext" id="popup">Bitte alle Felder ausfüllen</span>
+</div>
                 <button type="submit" class="btn btn-primary">Reservieren</button>
               </div>
             </div>
   </form>
 
-  <button onclick="backToTop()" id="scrollButton" title="Zurück nach oben">Hoch</button>
+  <div class="info">
+    <p>Bitte beachten sie: ihre Reservierung wird mit Klick auf "Reservieren" verbindlich.</p>
+  </div>
+  
 
 
 </body>
