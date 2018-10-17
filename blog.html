@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>La Cuisine - Blog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+  <link rel="stylesheet" href="./assets/css/navbar_styles.css">
+  <link rel="stylesheet" href="./assets/css/topbutton.css" />
+  <link rel="stylesheet" href="./assets/css/blog.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+  <script src="./assets/js/blog_script.js"></script>
+  <script src="./assets/js/navbar_script.js"></script>
+  <script src="./assets/js/top_button.js"></script>
+
+</head>
+
+<body>
+  <div class="nav"></div>
+  <img  class = "img" src="./content/img/blog.jpeg" />
+
+  <body>
+    <main>
+
+      <div class="container-fluid">
+
+
+          <div class="blogeintrag">
+            <h1>Neuer Blogeintrag</h1>
+            <br/>
+            <ul>
+
+            </ul>
+            <form
+                onsubmit = "validateForm(event)"
+                action   = "contact-form.php"
+                method   = "POST"
+                >
+          <div class="row">
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                  <span id="bezeichner" for="author">Author: </span>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-8">
+                  <input id="authorEingabe" class="eingabefeld" type="text" placeholder="Author" />
+                </div>
+          </div>
+          <div class="row">
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <span id="bezeichner" for="email">Titel:</span>
+                  </div>
+                  <div class="col-sm-12 col-md-8 col-lg-8">
+                    <input id="titelEingabe" class="eingabefeld" type="text" placeholder="Titel" />
+                  </div>
+          </div>
+          <div class="row">
+                  <div class="col-sm-12 col-md-4 col-lg-4">
+                    <span id="bezeichner" for="message">Message:</span>
+                  </div>
+                  <div class="col-sm-12 col-md-8 col-lg-8">
+                    <textarea id="nachrichtEingabe" class="eingabefeld" type="text" placeholder="Ihre Nachricht"></textarea>
+                  </div>
+          </div>
+          <br/>
+
+
+                  <!-- Button zum Abschicken des Formulars -->
+                  <button id="postButton" type="submit" class="btn btn-primary" value="Posten" >Posten</button>
+              </form>
+          </div>
+      </div>
+    </main>
+</body>
+
+</html>

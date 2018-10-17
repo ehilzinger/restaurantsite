@@ -1,0 +1,61 @@
+.blogeintrag{
+  margin: 30px;
+  padding: 20px;
+  border: 1px solid #000;
+  max-width: 30em;
+}
+
+#bezeichner{
+
+}
+.eingabefeld{
+      border: 1px solid #bebebe;
+      padding: 0.5em;
+      margin: 0;
+      outline: none;
+      width:100%;
+}
+
+textarea {
+    height: 12em;
+}
+main > ul > li {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 1em;
+    margin-top: 1em;
+
+    padding: 1em;
+    border: 1px solid rgb(173, 161, 46);
+    background: rgb(245, 238, 70);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+
+    min-width: 10em;
+    min-height: 10em;
+    max-width: 20em;
+
+    position: relative;
+    padding-bottom: 2.5em;
+}
+
+
+main > ul > li > p {
+    margin: 0;
+}
+
+
+main > ul > li > .delete {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+
+    color: blue !important;
+    text-decoration: underline;
+
+    cursor: pointer;
+}
+
+
+main > ul > li > .delete:hover {
+    color: rgb(43, 84, 255) !important;
+}
