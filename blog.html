@@ -30,19 +30,26 @@
 
   <body>
     <main>
+<ul>
+  
 
+
+  <li class="blogeintrag">
       <div class="container-fluid">
 
 
-          <div class="blogeintrag">
+          <div>
             <h1>Neuer Blogeintrag</h1>
             <br/>
-            <ul>
 
-            </ul>
+
+
+
             <form
-                onsubmit = "validateForm(event)"
-                action   = "contact-form.php"
+                onsubmit = "sendPost()"
+
+                action   = ""
+
                 method   = "POST"
                 >
           <div class="row">
@@ -71,10 +78,13 @@
           </div>
           <br/>
 
-
+            <div class="text-center">
                   <!-- Button zum Abschicken des Formulars -->
-                  <button id="postButton" type="submit" class="btn btn-primary" value="Posten" >Posten</button>
+                  <button id="postButton" type="submit" class="btn btn-primary">Posten</button>
+            </div>
               </form>
+            </li>
+              </ul>
           </div>
       </div>
     </main>
