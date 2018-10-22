@@ -31,7 +31,7 @@
   <body>
     <main>
 <ul>
-  
+
 
 
   <li class="blogeintrag">
@@ -48,7 +48,7 @@
             <form
                 onsubmit = "sendPost()"
 
-                action   = ""
+                action   = "./assets/php/blog.php"
 
                 method   = "POST"
                 >
@@ -57,7 +57,7 @@
                   <span id="bezeichner" for="author">Author: </span>
                 </div>
                 <div class="col-sm-12 col-md-8 col-lg-8">
-                  <input id="authorEingabe" class="eingabefeld" type="text" placeholder="Author" />
+                  <input id="authorEingabe" class="eingabefeld" type="text" name="author" placeholder="Author" />
                 </div>
           </div>
           <div class="row">
@@ -65,7 +65,7 @@
                     <span id="bezeichner" for="email">Titel:</span>
                   </div>
                   <div class="col-sm-12 col-md-8 col-lg-8">
-                    <input id="titelEingabe" class="eingabefeld" type="text" placeholder="Titel" />
+                    <input id="titelEingabe" class="eingabefeld" type="text" name="titel" placeholder="Titel" />
                   </div>
           </div>
           <div class="row">
@@ -73,7 +73,7 @@
                     <span id="bezeichner" for="message">Message:</span>
                   </div>
                   <div class="col-sm-12 col-md-8 col-lg-8">
-                    <textarea id="nachrichtEingabe" class="eingabefeld" type="text" placeholder="Ihre Nachricht"></textarea>
+                    <textarea id="nachrichtEingabe" class="eingabefeld" type="text"name="text" placeholder="Ihre Nachricht"></textarea>
                   </div>
           </div>
           <br/>

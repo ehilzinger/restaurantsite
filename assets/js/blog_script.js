@@ -1,8 +1,5 @@
 
-// $(document.getElementById("postButton")).click(function() {
-//     sendPost();
-// });
- $(document).click(function() {
+ $(document.getElementById("postButton")).click(function() {
      sendPost();
  });
 
