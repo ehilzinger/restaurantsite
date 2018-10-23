@@ -24,7 +24,7 @@ $currentdate = date("Y-m-d H:i:s");
 $sql = "insert into blog(title, message, name, date)  values ('$Title', '$Message', '$Author','$currentdate')";
 
 if($conn->query($sql) === TRUE){
-  header('Location: http://34.201.167.234/blog.html');
+  header('Location: http://ec2-34-201-167-234.compute-1.amazonaws.com/blog.html');
   exit;
 }
 
@@ -32,7 +32,10 @@ else{
 	echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
+
 $conn->close();
 
 die();
+
+
 ?>
