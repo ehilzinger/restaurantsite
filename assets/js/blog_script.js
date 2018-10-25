@@ -1,9 +1,9 @@
 
- $(document.getElementById("postButton")).click(function() {
-     sendPost();
+ // $(document.getElementById("postButton")).click(function() {
+ //     sendPost();
+ //
+ // });
 
- });
- 
 
 function insertPost(nachricht, titel, author, postList){
         let neuerPost = document.createElement("li");
@@ -78,36 +78,14 @@ function sendPost(){
      {
        if (xmlhttp.readyState==4 && xmlhttp.status==200)
        {
-         let neuerPost = document.createElement("li");
-         neuerPost.classList.add("blogeintrag");
-       //  postList.appendChild(neuerPost);
-         postList.insertBefore(neuerPost, postList.childNodes[0])
-
-
-
-         let neuerTitel = document.createElement("h1");
-         neuerTitel.textContent = titel;
-         neuerPost.appendChild(neuerTitel);
-
-         let Absatz = document.createElement("br");
-         neuerPost.appendChild(Absatz);
-
-         let neueNachricht = document.createElement("p");
-         neueNachricht.textContent = nachricht;
-         neuerPost.appendChild(neueNachricht);
-
-           let neuerAbsatz2 = document.createElement("br");
-           neuerPost.appendChild(neuerAbsatz2);
-
-         let neuerAuthor = document.createElement("p");
-         neuerAuthor.textContent = "geschrieben von "+xmlhttp.responseText;
-         neuerPost.appendChild(neuerAuthor);
-
+         let postList = document.querySelector("body > main > ul");
+        insertPost("ja es tut", "ja es tut", xmlhttp.responseText, postList);
 
        }
      }
-     alert("Methode aufgerufen");
+
      xmlhttp.open("GET","./assets/php/loadBlogeintraege.php?q="+blogID,true);
      xmlhttp.send();
+      alert("Methode aufgerufen");
 
    }
