@@ -11,18 +11,27 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "insert into blog(blogID, title, name, message) values (100, testObSQLTUT, hansi, hoffentlich tut wenigstens der insert)";
+
+$sql = "select * from blog";
 $result = $conn->query($sql);
 
-$blogID = $_GET['q'];
+// if ($result->num_rows > 0) {
+//     // output data of each row
+//     while($row = $result->fetch_assoc()) {
+//         echo "Name: " . $row["name"]." ". $row["title"]." ". $row["message"]." BlogID:".$blogID;
+//     }
+// } else {
+//     echo "0 results";
+// }
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "Name: " . $row["name"]. "<br>";
+        echo "".$row["blogID"]."//".$row["name"]."//". $row["title"]."//". $row["message"]."//".$row["date"]."//";
     }
 } else {
     echo "0 results";
 }
+
 $conn->close();
 ?>

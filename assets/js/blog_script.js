@@ -3,7 +3,10 @@
  //     sendPost();
  //
  // });
-
+window.onload = function () {
+  getPostContent();
+  alert("JS aufruf hat geklappt");
+}
 
 function insertPost(nachricht, titel, author, postList){
         let neuerPost = document.createElement("li");
@@ -53,7 +56,8 @@ function sendPost(){
        let nachrichtEingabe = document.getElementById("nachrichtEingabe");
        if (nachrichtEingabe.value === "" || titelEingabe.value === "" || authorEingabe.value===""){
          popUp();
-         return false;
+         alert("Zuerst alle Felder ausfüllen");
+         return;
        }
        let nachricht = nachrichtEingabe.value;
        let author = authorEingabe.value;
@@ -63,7 +67,7 @@ function sendPost(){
        insertPost(nachricht, titel, author, postList);
    };
 
-   function getPostContent(blogID){
+   function getPostContent(){
      if (window.XMLHttpRequest)
      {
        // AJAX nutzen mit IE7+, Chrome, Firefox, Safari, Opera
@@ -79,13 +83,46 @@ function sendPost(){
        if (xmlhttp.readyState==4 && xmlhttp.status==200)
        {
          let postList = document.querySelector("body > main > ul");
-        insertPost("ja es tut", "ja es tut", xmlhttp.responseText, postList);
+        // insertPost("ja es tut", "ja es tut", xmlhttp.responseText, postList);
+        ladeStringsInPost(xmlhttp.responseText);
 
        }
      }
 
-     xmlhttp.open("GET","./assets/php/loadBlogeintraege.php?q="+blogID,true);
+     xmlhttp.open("GET","./assets/php/loadBlogeintraege.php?q=",true);
      xmlhttp.send();
-      alert("Methode aufgerufen");
+      alert("Methode aufgerufen, ajax überstanden");
 
+   }
+
+   function ladeStringsInPost(result){
+    let postList = document.querySelector("body > main > ul");
+     let untereGr=0;
+     let obereGr;
+     let posZaehler=0;
+     let i;
+     var eintrag = ['blogID', 'name', 'titel', 'nachrichten', 'datum'];
+     //eintrag[0]= BlogID
+     //eintrag[1]=name
+     //eintrag[2]= titel
+     //eintrag[3]= nachricht
+     //eintrag[4]= datum
+
+     for(i=0; i < result.length; i++){
+       debugger;
+       if(posZaehler===5){
+         insertPost(eintrag[3],eintrag[2], eintrag[1], postList);
+         posZaehler=0;
+       }
+       // if(result.substring(i,(i+1))==="//"){
+        let substr = result.substring(i,i+2);
+        if(substr==="//"){
+         obereGr=i;
+         eintrag[posZaehler]= result.substring(untereGr, obereGr);
+         posZaehler++;
+         untereGr=obereGr+2;
+       }
+
+
+     }
    }

@@ -54,7 +54,7 @@ main > ul > li > .delete:hover {
     color: rgb(43, 84, 255) !important;
 }
 
-@media(max-width: 500px){
+@media(max-width: 575px){
   .blogeintrag{
     margin-top: 1em;
     margin-left: 1em;
