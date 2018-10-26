@@ -1,0 +1,74 @@
+.blogeintrag{
+  margin-top: 3em;
+  margin-left: 3em;
+  margin-right: 0em;
+  padding: 2em;
+  border: 1px solid #000;
+  max-width: 30em;
+  min-width: 20em;
+  min-height: 30em;
+  max-height:35em;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.eingabefeld{
+      border: 1px solid #bebebe;
+      padding: 0.5em;
+      margin: 0;
+      outline: none;
+      width:100%;
+}
+
+textarea {
+    height: 12em;
+}
+main > ul > li {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    /* padding-bottom: 2.5em; */
+}
+
+
+main > ul > li > p {
+    margin: 0;
+}
+
+
+main > ul > li > .delete {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+
+    color: blue !important;
+    text-decoration: underline;
+
+    cursor: pointer;
+}
+
+
+main > ul > li > .delete:hover {
+    color: rgb(43, 84, 255) !important;
+}
+
+@media(max-width: 575px){
+  .blogeintrag{
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 1em;
+    min-width: 15em;
+    line-height: 1.2;
+
+  }
+  body{
+    margin-right: 0em;
+    margin-left: 0em;
+  }
+  ul{
+    margin-right: 0em;
+  }
+}
