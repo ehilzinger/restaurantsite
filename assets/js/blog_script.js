@@ -5,7 +5,7 @@
  // });
 window.onload = function () {
   getPostContent();
-  alert("JS aufruf hat geklappt");
+  //alert("JS aufruf hat geklappt");
 }
 
 function insertPost(nachricht, titel, author, postList){
@@ -54,10 +54,11 @@ function sendPost(){
        let authorEingabe = document.getElementById("authorEingabe");
        let titelEingabe =document.getElementById("titelEingabe");
        let nachrichtEingabe = document.getElementById("nachrichtEingabe");
-       if (nachrichtEingabe.value === "" || titelEingabe.value === "" || authorEingabe.value===""){
+       debugger;
+       if (nachrichtEingabe.value == "" | titelEingabe.value == "" | authorEingabe.value==""){
          popUp();
-         alert("Zuerst alle Felder ausfüllen");
-         return;
+        // alert("Zuerst alle Felder ausfüllen");
+         return false;
        }
        let nachricht = nachrichtEingabe.value;
        let author = authorEingabe.value;
@@ -91,7 +92,7 @@ function sendPost(){
 
      xmlhttp.open("GET","./assets/php/loadBlogeintraege.php?q=",true);
      xmlhttp.send();
-      alert("Methode aufgerufen, ajax überstanden");
+      //alert("Methode aufgerufen, ajax überstanden");
 
    }
 
@@ -119,6 +120,11 @@ function sendPost(){
         if(substr==="//"){
          obereGr=i;
          eintrag[posZaehler]= result.substring(untereGr, obereGr);
+         // if(eintrag[posZaehler]==="/"){
+         //   i--;
+         //   eintrag[posZaehler]="-";
+         // }
+
          posZaehler++;
          untereGr=obereGr+2;
        }

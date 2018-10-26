@@ -66,5 +66,9 @@ main > ul > li > .delete:hover {
   }
   body{
     margin-right: 0em;
+    margin-left: 0em;
+  }
+  ul{
+    margin-right: 0em;
   }
 }

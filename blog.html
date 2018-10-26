@@ -9,9 +9,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
   <link rel="stylesheet" href="./assets/css/navbar_styles.css">
-  <link rel="stylesheet" href="./assets/css/topbutton.css" />
   <link rel="stylesheet" href="./assets/css/blog.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/popup.css" />
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -21,7 +21,7 @@
   <script src="./assets/js/blog_script.js"></script>
   <script src="./assets/js/navbar_script.js"></script>
   <script src="./assets/js/top_button.js"></script>
-  <script src="./assets/js/popup.js"></script>
+
 
 </head>
 
@@ -45,7 +45,7 @@
 
 
             <form
-                onsubmit = "sendPost()"
+                onsubmit = "return sendPost()"
 
                 action   = "./assets/php/blog.php"
 
@@ -78,6 +78,9 @@
           <br/>
 
             <div class="text-center">
+              <div class="popup" >
+                <span class="popuptext" id="popup">Bitte alle Felder ausfüllen</span>
+              </div>
                   <!-- Button zum Abschicken des Formulars -->
                   <button id="postButton" type="submit" class="btn btn-primary">Posten</button>
             </div>
@@ -87,6 +90,7 @@
           </div>
       </div>
     </main>
+
 </body>
 
 </html>
