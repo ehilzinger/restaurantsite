@@ -1,17 +1,20 @@
 
- // $(document.getElementById("postButton")).click(function() {
- //     sendPost();
- //
- // });
 window.onload = function () {
   getPostContent();
   //alert("JS aufruf hat geklappt");
 }
 
 function insertPost(nachricht, titel, author, datum, postList){
+  debugger;
+    datum = formatiereDatum(datum);
+      let datumZuAlt = checkDatumIfNotTooOld(datum);
+      if(datumZuAlt==true){
+        return false;
+      }
+
+
     let neuerPost = document.createElement("li");
     neuerPost.classList.add("blogeintrag");
-    //  postList.appendChild(neuerPost);
     postList.insertBefore(neuerPost, postList.childNodes[0])
 
 
@@ -35,7 +38,7 @@ function insertPost(nachricht, titel, author, datum, postList){
     neuerAuthor.classList.add("kleinschrift");
 
     let datumText = document.createElement("div");
-    datumText.textContent ="am "+formatiereDatum(datum);
+    datumText.textContent ="am "+datum;
     datumText.classList.add("kleinschrift");
 
     let unterschrift = document.createElement("div");
@@ -44,18 +47,9 @@ function insertPost(nachricht, titel, author, datum, postList){
     unterschrift.appendChild(datumText);
     neuerPost.appendChild(unterschrift);
 
-
-        // let deleteElement = document.createElement("a");
-        // deleteElement.textContent = "Löschen";
-        // deleteElement.classList.add("delete");
-        // liElement.appendChild(deleteElement);
-
-        // deleteElement.addEventListener("click", () => {
-        //     liElement.parentNode.removeChild(liElement);
-        // });
     };
 
-//    postButton.addEventListener("click", () => {
+
 function checkPost(){
        // Memotext vom Anwender abfragen
        let postButton = document.getElementById("postButton")
@@ -73,8 +67,7 @@ function checkPost(){
        let author = authorEingabe.value;
        let titel = titelEingabe.value;
 
-       // Neues Element in die HTML-Liste einfügen
-       //insertPost(nachricht, titel, author, postList);
+
    };
 
    function getPostContent(){
@@ -93,7 +86,7 @@ function checkPost(){
        if (xmlhttp.readyState==4 && xmlhttp.status==200)
        {
          let postList = document.querySelector("body > main > ul");
-        // insertPost("ja es tut", "ja es tut", xmlhttp.responseText, postList);
+
         ladeStringsInPost(xmlhttp.responseText);
 
        }
@@ -119,23 +112,18 @@ function checkPost(){
      //eintrag[4]= datum
 
      for(i=0; i < result.length; i++){
-       debugger;
+       //debugger;
        if(posZaehler===5){
          insertPost(eintrag[3],eintrag[2], eintrag[1], eintrag[4], postList);
          posZaehler=0;
        }
-       // if(result.substring(i,(i+1))==="//"){
-        let substr = result.substring(i,i+2);
-        if(substr==="//"){
+
+        let substr = result.substring(i,i+5);
+        if(substr==="/%$%/"){
          obereGr=i;
          eintrag[posZaehler]= result.substring(untereGr, obereGr);
-         // if(eintrag[posZaehler]==="/"){
-         //   i--;
-         //   eintrag[posZaehler]="-";
-         // }
-
          posZaehler++;
-         untereGr=obereGr+2;
+         untereGr=obereGr+5;
        }
 
 
@@ -149,4 +137,18 @@ function checkPost(){
        let formatiert = tage+"."+monat+"."+jahr;
        return formatiert;
 
+     }
+     function checkDatumIfNotTooOld(datum){
+       var aktuellesDatum = new Date();
+       var dd = aktuellesDatum.getDate();
+       var mm = aktuellesDatum.getMonth()+1;
+       var yyyy = aktuellesDatum.getFullYear();
+
+       //Wenn der Blogeintrag älter als ein Jahr zurückliegt, wird er nicht in die DOM aufgenommen
+       if(yyyy>datum.substring(6,10)){
+          return true;
+       }
+       else {
+         return false;
+       }
      }

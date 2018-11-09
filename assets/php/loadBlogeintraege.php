@@ -27,7 +27,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "".$row["blogID"]."//".$row["name"]."//". $row["title"]."//". $row["message"]."//".$row["date"]."//";
+        echo "".$row["blogID"]."/%$%/".$row["name"]."/%$%/". $row["title"]."/%$%/". $row["message"]."/%$%/".$row["date"]."/%$%/";
     }
 } else {
     echo "0 results";
