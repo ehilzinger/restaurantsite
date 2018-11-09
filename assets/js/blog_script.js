@@ -8,32 +8,41 @@ window.onload = function () {
   //alert("JS aufruf hat geklappt");
 }
 
-function insertPost(nachricht, titel, author, postList){
-        let neuerPost = document.createElement("li");
-        neuerPost.classList.add("blogeintrag");
-      //  postList.appendChild(neuerPost);
-        postList.insertBefore(neuerPost, postList.childNodes[0])
+function insertPost(nachricht, titel, author, datum, postList){
+    let neuerPost = document.createElement("li");
+    neuerPost.classList.add("blogeintrag");
+    //  postList.appendChild(neuerPost);
+    postList.insertBefore(neuerPost, postList.childNodes[0])
 
 
 
-        let neuerTitel = document.createElement("h1");
-        neuerTitel.textContent = titel;
-        neuerPost.appendChild(neuerTitel);
+    let neuerTitel = document.createElement("h1");
+    neuerTitel.textContent = titel;
+    neuerPost.appendChild(neuerTitel);
 
-        let Absatz = document.createElement("br");
-        neuerPost.appendChild(Absatz);
+    let Absatz = document.createElement("br");
+    neuerPost.appendChild(Absatz);
 
-        let neueNachricht = document.createElement("p");
-        neueNachricht.textContent = nachricht;
-        neuerPost.appendChild(neueNachricht);
+    let neueNachricht = document.createElement("p");
+    neueNachricht.textContent = nachricht;
+    neuerPost.appendChild(neueNachricht);
 
-          let neuerAbsatz2 = document.createElement("br");
-          neuerPost.appendChild(neuerAbsatz2);
+    let neuerAbsatz2 = document.createElement("br");
+    neuerPost.appendChild(neuerAbsatz2);
 
-        let neuerAuthor = document.createElement("p");
-        neuerAuthor.textContent = "geschrieben von "+author;
-        neuerPost.appendChild(neuerAuthor);
+    let neuerAuthor = document.createElement("div");
+    neuerAuthor.textContent = "geschrieben von "+author;
+    neuerAuthor.classList.add("kleinschrift");
 
+    let datumText = document.createElement("div");
+    datumText.textContent ="am "+formatiereDatum(datum);
+    datumText.classList.add("kleinschrift");
+
+    let unterschrift = document.createElement("div");
+    unterschrift.classList.add("unterschrift");
+    unterschrift.appendChild(neuerAuthor);
+    unterschrift.appendChild(datumText);
+    neuerPost.appendChild(unterschrift);
 
 
         // let deleteElement = document.createElement("a");
@@ -47,7 +56,7 @@ function insertPost(nachricht, titel, author, postList){
     };
 
 //    postButton.addEventListener("click", () => {
-function sendPost(){
+function checkPost(){
        // Memotext vom Anwender abfragen
        let postButton = document.getElementById("postButton")
        let postList = document.querySelector("body > main > ul");
@@ -65,7 +74,7 @@ function sendPost(){
        let titel = titelEingabe.value;
 
        // Neues Element in die HTML-Liste einfügen
-       insertPost(nachricht, titel, author, postList);
+       //insertPost(nachricht, titel, author, postList);
    };
 
    function getPostContent(){
@@ -112,7 +121,7 @@ function sendPost(){
      for(i=0; i < result.length; i++){
        debugger;
        if(posZaehler===5){
-         insertPost(eintrag[3],eintrag[2], eintrag[1], postList);
+         insertPost(eintrag[3],eintrag[2], eintrag[1], eintrag[4], postList);
          posZaehler=0;
        }
        // if(result.substring(i,(i+1))==="//"){
@@ -131,4 +140,13 @@ function sendPost(){
 
 
      }
-   }
+   };
+
+     function formatiereDatum(datum){
+       let jahr =datum.substring(0,4);
+       let monat=datum.substring(5,7);
+       let tage=datum.substring(8,10);
+       let formatiert = tage+"."+monat+"."+jahr;
+       return formatiert;
+
+     }

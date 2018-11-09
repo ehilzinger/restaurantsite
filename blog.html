@@ -21,6 +21,7 @@
   <script src="./assets/js/blog_script.js"></script>
   <script src="./assets/js/navbar_script.js"></script>
   <script src="./assets/js/top_button.js"></script>
+  <script src="./assets/js/popup.js"></script>
 
 
 </head>
@@ -45,7 +46,7 @@
 
 
             <form
-                onsubmit = "return sendPost()"
+                onsubmit = "return checkPost()"
 
                 action   = "./assets/php/blog.php"
 
@@ -53,10 +54,10 @@
                 >
           <div class="row">
                 <div class="col-sm-12 col-md-4 col-lg-4">
-                  <span id="bezeichner" for="author">Author: </span>
+                  <span id="bezeichner" for="author">Autor: </span>
                 </div>
                 <div class="col-sm-12 col-md-8 col-lg-8">
-                  <input id="authorEingabe" class="eingabefeld" type="text" name="author" placeholder="Author" />
+                  <input id="authorEingabe" class="eingabefeld" type="text" name="author" placeholder="Autor" />
                 </div>
           </div>
           <div class="row">
@@ -69,7 +70,7 @@
           </div>
           <div class="row">
                   <div class="col-sm-12 col-md-4 col-lg-4">
-                    <span id="bezeichner" for="message">Message:</span>
+                    <span id="bezeichner" for="message">Nachricht:</span>
                   </div>
                   <div class="col-sm-12 col-md-8 col-lg-8">
                     <textarea id="nachrichtEingabe" class="eingabefeld" type="text"name="text" placeholder="Ihre Nachricht"></textarea>
