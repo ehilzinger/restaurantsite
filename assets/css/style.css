@@ -16,7 +16,7 @@
 
 .btn{
     background-color: #e0a047 !important;
-    color: black !important; 
+    color: black !important;
     border-color: grey;
 }
 
@@ -24,9 +24,6 @@
     background-color: #FFFFFF !important;
 }
 
-a{
-
-}
 
 h1{
   font-size: 26px;
@@ -44,26 +41,6 @@ h3 {
   font-size: 16px;
   font-weight: bold;
   word-wrap: break-word;
-}
-
-p{
-
-}
-
-hr{
-
-}
-
-ul{
-
-}
-
-ol{
-
-}
-
-li{
-
 }
 
 blockquote{

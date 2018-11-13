@@ -21,6 +21,20 @@
       outline: none;
       width:100%;
 }
+.imgBlog{
+  padding:0em;
+  min-width: 20em;
+  max-width: 30em;
+}
+.kleinschrift{
+    font-size: 14px;
+}
+.unterschrift{
+
+  padding-bottom: 2em;
+  position: absolute;
+  bottom: 0;
+}
 
 textarea {
     height: 12em;
@@ -56,19 +70,26 @@ main > ul > li > .delete:hover {
 
 @media(max-width: 575px){
   .blogeintrag{
-    margin-top: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-top: 2em;
+    margin-left: 0em;
+    margin-right: 2em;
     padding: 1em;
     min-width: 15em;
     line-height: 1.2;
 
   }
-  body{
+  main{
+    margin-right: 3em;
+    margin-left: 2em;
+  }
+  li{
     margin-right: 0em;
-    margin-left: 0em;
   }
   ul{
     margin-right: 0em;
+    margin-left:0em;
+    padding-left: 0em;
+    padding-right: 0em;
   }
+
 }
