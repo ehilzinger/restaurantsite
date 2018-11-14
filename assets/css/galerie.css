@@ -1,7 +1,10 @@
-#carouselExampleControls{
+
+  #carouselControls{
   height: auto;
   width: auto;
 }
+
+
 
 .d-block{
   position: relative;
@@ -17,6 +20,7 @@
    position: relative;
    float: left;
    width:  10em;
+   height: 5em;
    background-position: 50% 50%,;
    background-repeat:   no-repeat;
    background-size:     cover;
@@ -26,11 +30,18 @@
 .gallery-title
 {
     font-size: 36px;
-    color: #42B32F;
+    color: #585858;
     text-align: center;
     font-weight: 500;
-    margin-bottom: 70px;
+    margin-bottom: 10px;
 }
+
+.text{
+  text-align: center;
+  margin-bottom
+
+}
+
 .gallery-title:after {
     content: "";
     position: absolute;
@@ -42,23 +53,33 @@
 .filter-button
 {
     font-size: 18px;
-    border: 1px solid #42B32F;
+    border: 1px solid #585858;
     border-radius: 5px;
     text-align: center;
-    color: #42B32F;
+    color: #585858;
     margin-bottom: 30px;
 
 }
 .filter-button:hover
 {
     font-size: 18px;
-    border: 1px solid #42B32F;
+    border: 1px solid #B40431;
     border-radius: 5px;
     text-align: center;
-    color: #ffffff;
-    background-color: #42B32F;
+    color: #B40431;
+    background-color: #A4A4A4;
 
 }
+
+.row{
+  height: 10em;
+}
+
+.col-sm{
+  width: 30%;
+  height: 80%
+}
+
 .btn-default:active .filter-button:active
 {
     background-color: #42B32F;

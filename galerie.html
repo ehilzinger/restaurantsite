@@ -23,6 +23,7 @@
   <script src="./assets/js/navbar_script.js"></script>
   <script src="./assets/js/top_button.js"></script>
   <script src="./assets/js/popup.js"></script>
+  <script src="assets\js\galerie_script.js"></script>
 
 
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -40,13 +41,16 @@
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="C:\Users\d070533\Documents\DHBW\Semester 3\Webprogrammierung\Restaurant-Ding\restaurantsite\content\galerie_img\flammkuchen.jpg" alt="First slide">
+      <img class="d-block w-100" src="content\galerie_img\hauptspeise4.jpeg" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="C:\Users\d070533\Documents\DHBW\Semester 3\Webprogrammierung\Restaurant-Ding\restaurantsite\content\galerie_img\brioche.jpg" alt="Second slide">
+      <img class="d-block w-100" src="content\galerie_img\hauptspeise5.jpeg" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="C:\Users\d070533\Documents\DHBW\Semester 3\Webprogrammierung\Restaurant-Ding\restaurantsite\content\galerie_img\restaurant.jpg" alt="Third slide">
+      <img class="d-block w-100" src="content\galerie_img\vorspeise4.jpeg" alt="Third slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="content\galerie_img\wein3.jpeg" alt="Fourth slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -64,73 +68,74 @@
  <div class="container">
         <div class="row">
         <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h1 class="gallery-title">Imperssionen</h1>
-            <p>
-              Hier kommt noch Text rein
+            <h1 class="gallery-title">IMPRESSIONEN</h1>
+            <p class="text">
+            aus unserem Restaurant
             </p>
 
         </div>
 
         <div align="center">
-            <button class="btn btn-default filter-button" data-filter="vs">Vorspeisen</button>
-            <button class="btn btn-default filter-button" data-filter="hg">Hauptgerichte</button>
-            <button class="btn btn-default filter-button" data-filter="ev">Events</button>
-            <button class="btn btn-default filter-button" data-filter="wn">Wein</button>
-            <button class="btn btn-default filter-button" data-filter="all">All</button>
+            <button class="btn btn-default filter-button" data-filter="alles">All</button>
+            <button class="btn btn-default filter-button" data-filter="hauptspeisen">Hauptgerichte</button>
+            <button class="btn btn-default filter-button" data-filter="vorspeisen">Vorspeisen</button>
+            <button class="btn btn-default filter-button" data-filter="nachspeisen">Nachspeisen</button>
+            <button class="btn btn-default filter-button" data-filter="wein">Wein</button>
         </div>
+
         <br />
 
-<!-- class="img_gal_container" class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hg" -->
 
-            <div class="img_gal_container" class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hg">
-                <img src="C:\Users\d070533\Documents\DHBW\Semester 3\Webprogrammierung\Restaurant-Ding\restaurantsite\content\galerie_img\flammkuchen.jpg" class="img_gal">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm filter hauptspeisen">
+              <img src="C:\Users\d070533\Documents\DHBW\Semester 3\Webprogrammierung\Restaurant-Ding\restaurantsite\content\galerie_img\hauptspeise1.jpeg" class="img_gal">
             </div>
-
-            <div class="img_gal_container" class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hg">
-                <img src="C:\Users\d070533\Documents\DHBW\Semester 3\Webprogrammierung\Restaurant-Ding\restaurantsite\content\galerie_img\vorspeise1.jpg" class="img_gal" class="img-responsive">
-
+            <div class="col-sm filter nachspeisen">
+              <img src="C:\Users\d070533\Documents\DHBW\Semester 3\Webprogrammierung\Restaurant-Ding\restaurantsite\content\galerie_img\nachspeise1.jpeg" class="img_gal img-responsive">
             </div>
-
-            <div  class="img_gal gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-                <img src="http://fakeimg.pl/365x365/" class="img_gal" class="img-responsive">
+            <div class="col-sm filter vorspeisen">
+              <img src="C:\Users\d070533\Documents\DHBW\Semester 3\Webprogrammierung\Restaurant-Ding\restaurantsite\content\galerie_img\vorspeise1.jpeg" class="img_gal img-responsive">
             </div>
+          </div>
 
-            <div class="img_gal gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-                <img src="http://fakeimg.pl/365x365/" class="img_gal" class="img-responsive">
+          <div class="row">
+            <div class="col-sm filter wein">
+              <img src="C:\Users\d070533\Documents\DHBW\Semester 3\Webprogrammierung\Restaurant-Ding\restaurantsite\content\galerie_img\wein1.jpeg" class="img_gal img-responsive">
             </div>
+            <div class="col-sm filter hauptspeisen">
+              <img src="C:\Users\d070533\Documents\DHBW\Semester 3\Webprogrammierung\Restaurant-Ding\restaurantsite\content\galerie_img\hauptspeise2.jpg" class="img_gal img-responsive">
+            </div>
+            <div class="col-sm filter nachspeisen">
+              <img src="C:\Users\d070533\Documents\DHBW\Semester 3\Webprogrammierung\Restaurant-Ding\restaurantsite\content\galerie_img\nachspeise2.png" class="img_gal img-responsive">
+            </div>
+          </div>
 
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-                <img src="http://fakeimg.pl/365x365/" class="img_gal" class="img-responsive">
+          <div class="row">
+            <div class="col-sm filter vorspeisen">
+              <img src="C:\Users\d070533\Documents\DHBW\Semester 3\Webprogrammierung\Restaurant-Ding\restaurantsite\content\galerie_img\vorspeise2.jpg" class="img_gal img-responsive">
             </div>
+            <div class="col-sm filter wein">
+              <img src="content\galerie_img\wein1.jpeg" class="img_gal img-responsive">
+            </div>
+            <div class="col-sm filter hauptspeisen">
+              <img src="C:\Users\d070533\Documents\DHBW\Semester 3\Webprogrammierung\Restaurant-Ding\restaurantsite\content\galerie_img\hauptspeise3.jpeg" class="img_gal img-responsive">
+            </div>
+          </div>
 
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-                <img src="http://fakeimg.pl/365x365/" class="img_gal" class="img-responsive">
+          <div class="row">
+            <div class="col-sm filter nachspeisen">
+              <img src="C:\Users\d070533\Documents\DHBW\Semester 3\Webprogrammierung\Restaurant-Ding\restaurantsite\content\galerie_img\nachspeise3.jpeg" class="img_gal img-responsive">
             </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            <div class="col-sm filter wein">
+              <img src="content\galerie_img\wein2.jpg" class="img_gal img-responsive">
             </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+            <div class="col-sm filter vorspeisen">
+              <img src="C:\Users\d070533\Documents\DHBW\Semester 3\Webprogrammierung\Restaurant-Ding\restaurantsite\content\galerie_img\vorspeise3.jpeg" class="img_gal img-responsive">
             </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
+          </div>
         </div>
+
     </div>
 </section>
 
