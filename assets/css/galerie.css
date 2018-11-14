@@ -73,11 +73,14 @@
 
 .row{
   height: 10em;
+  display: inline-flex;
 }
 
 .col-sm{
   width: 30%;
   height: 80%
+  margin-left: 1 em;
+  margin-right: 1 em;
 }
 
 .btn-default:active .filter-button:active
