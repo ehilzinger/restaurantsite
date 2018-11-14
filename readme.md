@@ -16,3 +16,9 @@ HTML, JS, CSS, PHP
 Live version can be viewed at: www.la-cu.com
 
 Hosting created and maintained with ♥ by TheEny53 on AWS
+
+## Differences between function specification and implementation
+
+Blog Entries: To avoid storage problems and a downgrade of the Blog-design,
+the blog entries were realized without header pictures firstly described 
+in the function specification.
