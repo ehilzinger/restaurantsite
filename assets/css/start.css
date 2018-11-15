@@ -1,0 +1,15 @@
+.d-block{
+  position: relative;
+  width:  80%;
+  height:50%;
+  background-position: 50% 50%,;
+  background-repeat:   no-repeat;
+  background-size:     cover;
+  max-height: 400px;
+  }
+
+.welcomeText{
+  margin: auto;
+  text-align: center;
+
+}
