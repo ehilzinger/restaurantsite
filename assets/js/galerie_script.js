@@ -3,9 +3,9 @@ $(document).ready(function(){
     $(".filter-button").click(function(){
         let value = $(this).attr('data-filter');
 
-        if(value == "all")
+        if(value == "alles")
         {
-            $('.filter').show('1000');
+            $('.filter').show('3000');
         }
         else
         {

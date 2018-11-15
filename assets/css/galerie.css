@@ -1,10 +1,4 @@
 
-  #carouselControls{
-  height: auto;
-  width: auto;
-}
-
-
 
 .d-block{
   position: relative;
@@ -13,6 +7,7 @@
   background-position: 50% 50%,;
   background-repeat:   no-repeat;
   background-size:     cover;
+  max-height: 400px;
   }
 
 
