@@ -48,6 +48,8 @@ Blog Entries: To avoid storage problems and a downgrade of the Blog-design,
 the blog entries were realized without header pictures firstly described
 in the function specification.
 
+Menu: As the page scroll animation did not work as expected in testing, we decided to not use any animation for our menu page. In order to comply with our global design policies, we also did **not** make the menu appear as if it was a book, but we decided to go with a clean-looking, stripped down menu page, as we felt that this was way more elegant than a book as background image.
+
 ## Disclaimer
 
 This work was created for the educational institution "Corporate State University of Baden-Wuerttemberg Karlsruhe". The creators do not
