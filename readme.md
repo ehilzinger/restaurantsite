@@ -10,8 +10,21 @@ Enzo Hilzinger, Tim Bayer, Anika Schmidt
 ## Installation Instructions
 
 HTML files including their JS functions can be viewed with any browser. For the additional functionalities, which are the
-blog and the reservation system, a server backend with corresponding database tables is needed. These databases are already
-present on the AWS EC2 instance which is linked below.
+blog and the reservation system, a server backend with corresponding database tables is needed (complete XAMPP installation recommended). These databases are already present on the AWS EC2 instance which is linked below, and to keep thins simple we will not provide a detailed installation instruction for the database.
+The database schema is as follows:
+
+Database name: "restaurant"
+
+Tables:
+
+* reservations (lastname: varchar(45), firstname: varchar(45), date: datetime, amountofpersons: integer, email: varchar(45), notes: varchar(400))
+* blog (title: varchar(45), message: varchar(200), name: varchar(45), date: datetime)
+
+The database users in the PHP files have to be edited to appropriate users, as the users used in our PHP scripts will only work with our database.
+Recommendation:
+
+* book.php and blog.php: user with insert permission for the corresponding tables
+* loadBlogeintraege.php: user with select permission for "blog"
 
 ## Used Technologies
 
