@@ -1,0 +1,25 @@
+.carousel-inner > .item > img {
+   display: grid;
+   margin: auto;
+}
+
+.carousel{
+   max-width: 1000px;
+   margin: auto;
+   padding-top: 4em;
+}
+
+@media(min-width:769px){
+    .carousel{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media(min-width:900px){
+    .carousel{
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+
+}

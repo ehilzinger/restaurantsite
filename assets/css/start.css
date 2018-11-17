@@ -1,17 +1,8 @@
-.d-block{
-  position: relative;
-  width:  80%;
-  height:50%;
-  background-position: 50% 50%,;
-  background-repeat:   no-repeat;
-  background-size:     cover;
-  max-height: 400px;
-  }
+
 
 .welcomeText{
-  margin: 5em;
+  margin-top: 2.5em;
   text-align: center;
-
 }
 
 h1{
@@ -20,4 +11,19 @@ h1{
 
 a{
   color: #8A0808
+}
+
+@media(min-width:769px){
+    .welcomeText{
+      margin-top: 4em;
+      margin-bottom: 1em;
+    }
+
+}
+
+@media(min-width:900px){
+    .welcomeText{
+      margin-top: 5em;
+    }
+
 }
