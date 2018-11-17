@@ -9,7 +9,15 @@
   }
 
 .welcomeText{
-  margin: auto;
+  margin: 5em;
   text-align: center;
 
+}
+
+h1{
+  text-align: center;
+}
+
+a{
+  color: #8A0808
 }
